@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-ene-2019 11:58:35 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="packageP.Pedido" table="PEDIDO">
+        <id name="idPedido" type="int">
+            <column name="IDPEDIDO" />
+            <generator class="increment" />
+        </id>
+        <property name="fechaPedido" type="date">
+            <column name="FECHA" />
+        </property>
+        
+        <list name="listaItem" table="ITEM" inverse="true" cascade="save-update">
+	        <key column="PEDIDO"/>
+	        <list-index column="POSICIONPEDIDO">
+	        </list-index>
+	        <one-to-many class="packageP.Item" />      
+        </list>
+        
+<!--         <one-to-one name="pedido" class="packageP.Pedido" property-ref="pedido" /> -->
+    </class>
+</hibernate-mapping>

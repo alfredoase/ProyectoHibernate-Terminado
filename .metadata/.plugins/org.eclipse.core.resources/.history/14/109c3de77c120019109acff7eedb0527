@@ -1,0 +1,33 @@
+package packageP;
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Pedido {
+
+	private int idPedido;
+	private Date fechaPedido;
+	private Set<Item> listaItem = new HashSet<Item>();
+	
+	public int getIdPedido() {
+		return idPedido;
+	}
+	public void setIdPedido(int idPedido) {
+		this.idPedido = idPedido;
+	}
+	
+	public Date getFechaPedido() {
+		return fechaPedido;
+	}
+	public void setFechaPedido(Date fechaPedido) {
+		this.fechaPedido = fechaPedido;
+	}
+	
+	public Set<Item> getListaItem() {
+		return listaItem;
+	}
+	public void setListaItem(Set<Item> listaItem) {
+		this.listaItem = listaItem;
+	}
+}

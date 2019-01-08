@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06-ene-2019 20:20:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="packageP.Empresa" table="EMPRESA">
+        <id name="CIF" type="java.lang.String">
+            <column name="CIF" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="empleados" type="int">
+            <column name="EMPLEADOS" />
+        </property>
+        <property name="direccion" type="java.lang.String">
+            <column name="DIRECCION" />
+        </property>
+        
+        <!-- DIRECCION -->
+        <many-to-one name="direccion" class="packageP.Direccion" column="IDDir" cascade="save-update" unique="true"/>
+        <!-- DIRECCION -->
+        
+        <!-- PEDIDO -->
+        <many-to-one name="pedido" class="packageP.Pedido" column="IDPed" cascade="save-update" unique="true"/>
+        <!-- PEDIDO -->
+        
+    </class>
+</hibernate-mapping>

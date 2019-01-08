@@ -1,0 +1,43 @@
+package packageP;
+
+import java.util.Date;
+
+import org.hibernate.Session;
+
+public class Program {
+		
+	public static void main(String[] args) {
+		System.out.println("Hola");
+		
+		Session session = HibernateUtilities.getSessionFactory().openSession();
+		
+		//COMIENZA INSERTAR
+		session.beginTransaction();
+		
+		Pedido p = new Pedido();
+		p.setFechaPedido(new Date());
+
+		
+		session.save(p);
+		
+		session.getTransaction().commit(); 
+		
+		//ACABA INSERTAR
+		
+		//COMIENZA MOSTRAR
+		
+		session.beginTransaction();
+		
+		Empresa u = session.get(Empresa.class, "AFG");
+		System.out.println("Hemos recuperado empresa: "+u.getNombre()+" "+u.getCIF());
+		
+		session.getTransaction().commit();
+		
+		//ACABA MOSTRAR
+		
+		session.close();	
+		
+		HibernateUtilities.getSessionFactory().close();
+	}
+	
+}

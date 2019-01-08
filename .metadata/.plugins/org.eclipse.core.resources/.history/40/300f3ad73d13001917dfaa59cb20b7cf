@@ -1,0 +1,64 @@
+package packageP;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Empresa {
+
+	private String CIF;
+	private String nombre;
+	private int empleados;
+	private String direccion;
+	
+	//private Direccion dir;
+	
+	private List<Pedido> listaPedido = new ArrayList<Pedido>();
+	
+	public Empresa() {
+		
+	}
+	
+	public Direccion getDir() {
+		return dir;
+	}
+	public void setDir(Direccion dir) {
+		this.dir = dir;
+	}
+ 
+	public List<Pedido> getListaPedido() {
+		return listaPedido;
+	}
+	public void setListaPedido(List<Pedido> listaPedido) {
+		this.listaPedido = listaPedido;
+	}
+ 
+	public String getCIF() {
+		return CIF;
+	}
+	public void setCIF(String Cif) {
+		CIF = Cif;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public int getEmpleados() {
+		return empleados;
+	}
+	public void setEmpleados(int empleados) {
+		this.empleados = empleados;
+	}
+	
+	public String getDireccion() {
+		return direccion;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	
+	
+}

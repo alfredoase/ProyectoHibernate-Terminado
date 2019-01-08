@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\ALFREDO\CURSO 2018 - 2019 - DAM\Acceso a Datos\HIBERNATE\WORKSPACE-HIBERNATE\.metadata\.plugins\org.eclipse.jdt.core
+3189345981.index
+2612888691.index

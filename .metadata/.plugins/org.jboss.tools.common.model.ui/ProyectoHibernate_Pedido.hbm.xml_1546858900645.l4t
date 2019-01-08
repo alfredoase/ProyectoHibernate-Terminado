@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout resource="/ProyectoHibernate/src/packageP/Pedido.hbm.xml">
+ <TreeFormPage>
+  <Memento type="FileHibernate3">
+   <Memento collapsed="false" type="File Hibernate 3.0"/>
+   <Memento collapsed="false" type="Advanced"/>
+   <Memento collapsed="false" type="Meta"/>
+   <Memento collapsed="false" type="Types"/>
+   <Memento collapsed="false" type="Imports"/>
+   <Memento collapsed="false" type="Classes"/>
+   <Memento collapsed="false" type="Queries"/>
+   <Memento collapsed="false" type="Filters"/>
+  </Memento>
+  <Memento type="Hibernate3Key">
+   <Memento collapsed="false" type="Key"/>
+   <Memento collapsed="false" type="Columns"/>
+   <Memento collapsed="false" type="Advanced"/>
+  </Memento>
+ </TreeFormPage>
+</Layout>

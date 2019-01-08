@@ -1,0 +1,55 @@
+package packageP;
+
+public class Direccion {
+	
+	private String calle;
+	private String poblacion;
+	private int CP;
+	private int id;
+	private Empresa empresa;
+	
+	public Direccion(String calle, String poblacion, int cP, int id, Empresa empresa) {
+		super();
+		this.calle = calle;
+		this.poblacion = poblacion;
+		this.CP = cP;
+		this.id = id;
+		this.empresa = empresa;
+	}
+	
+	public String getCalle() {
+		return calle;
+	}
+	public void setCalle(String calle) {
+		this.calle = calle;
+	}
+	
+	public String getPoblacion() {
+		return poblacion;
+	}
+	public void setPoblacion(String poblacion) {
+		this.poblacion = poblacion;
+	}
+	
+	public int getCP() {
+		return CP;
+	}
+	public void setCP(int cP) {
+		CP = cP;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+		
+	}
+}

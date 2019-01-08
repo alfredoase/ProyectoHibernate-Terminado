@@ -1,0 +1,84 @@
+package packageP;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Empresa {
+	private int id;
+	private String CIF;
+	private String nombre;
+	private int empleados;
+	private String direccion;
+	private List<Pedido> listaPedido = new ArrayList<Pedido>();
+	//private Direccion dir;
+	
+	public Empresa() {
+		
+	}
+	
+	public Empresa(int id, String Cif, String nombre, int empleados, String direccion, List<Pedido> listaPedido) {
+		super();
+		this.id = id;
+		this.CIF = Cif;
+		this.nombre = nombre;
+		this.empleados = empleados;
+		this.direccion = direccion;
+		this.listaPedido = listaPedido;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	/*public Direccion getDir() {
+		return dir;
+	}
+	public void setDir(Direccion dir) {
+		this.dir = dir;
+	}*/
+ 
+	public List<Pedido> getListaPedido() {
+		return listaPedido;
+	}
+	public void setListaPedido(List<Pedido> listaPedido) {
+		this.listaPedido = listaPedido;
+	}
+	public void addPedido(Pedido pedido){
+		pedido.setEmpresa(this);
+		this.listaPedido.add(pedido);
+	}
+ 
+	public String getCIF() {
+		return CIF;
+	}
+	public void setCIF(String Cif) {
+		CIF = Cif;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public int getEmpleados() {
+		return empleados;
+	}
+	public void setEmpleados(int empleados) {
+		this.empleados = empleados;
+	}
+	
+	public String getDireccion() {
+		return direccion;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	
+	
+}
